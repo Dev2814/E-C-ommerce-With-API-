@@ -1,0 +1,102 @@
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <p>Dear {{ firstname }},</p>
+
+    <p>Thank you for your order! 🛒✔️</p>
+
+    <p>
+      We're excited to let you know that your order has been successfully placed
+      at <b>UrbanBazzar</b>. 🎉 We are working on processing it and will notify you as soon as it's on its way.
+    </p>
+
+    <p><b>Order Details:</b></p>
+    <ul>
+      <li><b>Order Number:</b> {{ order_number }}</li>
+      <li><b>Total Amount:</b> ₹{{ total_amount }}</li>
+      <li><b>Shipping Address:</b> {{ shipping_address }}</li>
+      <li><b>Payment Method:</b> {{ payment_method }}</li>
+    </ul>
+
+    <p>If you need to make any changes or have any questions about your order, please reach out to us:</p>
+    <ul>
+      <li>
+        📧 Contact Support:
+        <a href="mailto:{{ support_email }}">{{ support_email }}</a>
+      </li>
+      <li>
+        📖 Visit Help Center:
+        <a href="{{ help_center_url }}">UrbanBazzar Help Center</a>
+      </li>
+    </ul>
+
+    <p>Thank you for shopping with us! We can't wait to deliver your order. 🚚💨</p>
+
+    <p>
+      Best Regards,<br />
+      <b>The UrbanBazzar Team</b>
+    </p>
+  </body>
+</html> {% endcomment %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order Confirmation</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 20px; color: #333;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="max-width: 600px; margin: auto; background-color: #fff; padding: 20px; border-radius: 10px;">
+    <tr>
+      <td>
+        <h2 style="color: #2c3e50;">Hi {{ firstname }},</h2>
+        <p>Thank you for your order with <b>UrbanBazzar</b>! 🛒</p>
+
+        <p>Your order has been successfully placed and is now being processed. You'll receive another update when it ships. 🎉</p>
+
+        <h3>🧾 Order Summary</h3>
+        <table width="100%" style="border: 1px solid #ddd; margin-bottom: 20px;">
+          <tr>
+            <td style="padding: 5px;"><strong>Product:</strong></td>
+            <td style="padding: 5px;">{{ product_name }}</td>
+          </tr>
+          <tr>
+            <td style="padding: 5px;"><strong>Quantity:</strong></td>
+            <td style="padding: 5px;">{{ quantity }}</td>
+          </tr>
+          <tr>
+            <td style="padding: 5px;"><strong>Total:</strong></td>
+            <td style="padding: 5px;">₹{{ total_amount }}</td>
+          </tr>
+          <tr>
+            <td style="padding: 5px;"><strong>Shipping Address:</strong></td>
+            <td style="padding: 5px;">{{ shipping_address }}</td>
+          </tr>
+          <tr>
+            <td style="padding: 5px;"><strong>Payment Method:</strong></td>
+            <td style="padding: 5px;">{{ payment_method }}</td>
+          </tr>
+        </table>
+
+        <p>If you need help, feel free to reach out:</p>
+        <ul style="padding-left: 20px;">
+          <li>📧 <a href="mailto:{{ support_email }}">{{ support_email }}</a></li>
+          <li>📖 <a href="{{ help_center_url }}">UrbanBazzar Help Center</a></li>
+        </ul>
+
+        <p>Thanks again for choosing UrbanBazzar. We can't wait to deliver your product! 🚚</p>
+
+        <p style="margin-top: 30px;">
+          Best regards,<br />
+          <strong>The UrbanBazzar Team</strong>
+        </p>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invalid Reset Link - UrbanBazzar</title>
+    <link rel="stylesheet" href="{% static 'css/Forgetpassword.css' %}">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon_white/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon_white/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon_white/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'favicon_white/site.webmanifest' %}">
+    <link rel="icon" href="{% static 'favicon_white/favicon.ico' %}">
+</head>
+<body>
+    <div id="content" class="Forget-Password">
+        <header>
+            <img src="{% static 'images/UrbanBazzarWhite.png' %}" alt="UrbanBazzar Logo" class="logo">
+        </header>
+
+        <h2>Invalid Reset Link</h2>
+        <div class="error-message">
+            <p>The password reset link you used is either:</p>
+            <ul>
+                <li>Invalid or has expired</li>
+                <li>Has already been used</li>
+            </ul>
+            <p>For security reasons, password reset links can only be used once.</p>
+        </div>
+
+        <div class="action-buttons">
+            <a href="{% url 'users:send_password_reset_email' %}" class="btn">Request New Reset Link</a>
+            <a href="{% url 'users:Login_user' %}" class="btn secondary">Back to Login</a>
+        </div>
+    </div>
+</body>
+</html>
